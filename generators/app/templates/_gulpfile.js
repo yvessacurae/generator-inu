@@ -21,7 +21,7 @@ gulp.task('styles', function() {
 				cascade: false
 			}))
 			.pipe(cleanCSS())
-			.pipe(sourcemaps.write('dist/maps/'))
+			.pipe(sourcemaps.write('../maps/'))
 			.pipe(gulp.dest('dist/css/'))
 			.pipe(browserSync.stream());
 	}, 200);
@@ -34,7 +34,7 @@ gulp.task('scripts', function() {
 			])
 			.pipe(sourcemaps.init())
 			.pipe(concat('scripts.js'))
-			.pipe(sourcemaps.write('dist/maps/'))
+			.pipe(sourcemaps.write('../maps/'))
 			.pipe(gulp.dest('dist/js/'))
 			.pipe(browserSync.stream());
 	}, 200);
@@ -44,7 +44,7 @@ gulp.task('views', function buildHTML() {
   return gulp.src('src/views/*.pug')
 		.pipe(sourcemaps.init())
 		.pipe(pug())
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest('dist/'))
 });
 
