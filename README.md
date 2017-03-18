@@ -1,19 +1,19 @@
-# generator-sakurai [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-inu [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > My First Generator
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-sakurai using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-inu using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-sakurai
+npm install -g generator-inu
 ```
 
 Then generate your new project:
 
 ```bash
-yo sakurai
+yo inu
 ```
 
 ## Getting To Know Yeoman
@@ -28,9 +28,9 @@ yo sakurai
 MIT © [Yves Sacurae]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-sakurai.svg
-[npm-url]: https://npmjs.org/package/generator-sakurai
-[travis-image]: https://travis-ci.org/yvessacurae/generator-sakurai.svg?branch=master
-[travis-url]: https://travis-ci.org/yvessacurae/generator-sakurai
-[daviddm-image]: https://david-dm.org/yvessacurae/generator-sakurai.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/yvessacurae/generator-sakurai
+[npm-image]: https://badge.fury.io/js/generator-inu.svg
+[npm-url]: https://npmjs.org/package/generator-inu
+[travis-image]: https://travis-ci.org/yvessacurae/generator-inu.svg?branch=master
+[travis-url]: https://travis-ci.org/yvessacurae/generator-inu
+[daviddm-image]: https://david-dm.org/yvessacurae/generator-inu.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/yvessacurae/generator-inu
