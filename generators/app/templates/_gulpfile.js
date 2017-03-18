@@ -1,7 +1,9 @@
 var	pug 			= require('gulp-pug');
 	gulp 			= require('gulp'),
 	sass 			= require('gulp-sass'),
+	notify 			= require("gulp-notify"),
 	concat 			= require('gulp-concat'),
+	plumber			= require('gulp-plumber'),
 	cleanCSS 		= require('gulp-clean-css'),
 	sourcemaps 		= require('gulp-sourcemaps'),
 	browserSync		= require('browser-sync').create(),
@@ -12,10 +14,8 @@ gulp.task('styles', function() {
 	setTimeout(function() {
 		gulp.src('src/scss/styles.scss')
 			.pipe(sourcemaps.init())
+			.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 			.pipe(sass())
-			.on('error', function (err) {
-				console.error('Error!', err.message);
-			})
 			.pipe(autoprefixer({
 				browsers: ['last 2 versions'],
 				cascade: false
@@ -32,6 +32,7 @@ gulp.task('scripts', function() {
 		gulp.src([
 			'src/js/**/*.js'
 			])
+			.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 			.pipe(sourcemaps.init())
 			.pipe(concat('scripts.js'))
 			.pipe(sourcemaps.write('../maps/'))
@@ -43,6 +44,7 @@ gulp.task('scripts', function() {
 gulp.task('views', function buildHTML() {
   return gulp.src('src/views/*.pug')
 		.pipe(sourcemaps.init())
+		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(pug())
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest('dist/'))
