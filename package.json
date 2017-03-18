@@ -4,11 +4,7 @@
   "description": "Yo Inu Generator for front-end developers",
   "main": "generators/index.js",
   "homepage": "https://github.com/yvessacurae/generator-inu",
-  "author": {
-    "name": "Yves Sacurae",
-    "email": "yvessacurae@gmail.com",
-    "url": ""
-  },
+  "author": "Yves Sacurae <yvessacurae@gmail.com>",
   "files": [
     "generators"
   ],
@@ -26,13 +22,12 @@
       "mocha": true
     }
   },
-  "repository": "yvessacurae/generator-inu",
-  "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvessacurae/generator-inu.git"
   },
   "license": "MIT",
-  "devDependencies": {
-    "gulp": "^3.9.1"
+  "bugs": {
+    "url": "https://github.com/yvessacurae/generator-inu/issues"
   }
 }
