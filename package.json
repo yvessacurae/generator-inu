@@ -1,7 +1,7 @@
 {
   "name": "generator-inu",
-  "version": "0.0.0",
-  "description": "My First Generator",
+  "version": "0.1.0",
+  "description": "Yo Inu Generator for front-end developers",
   "homepage": "https://github.com/yvessacurae/generator-inu",
   "author": {
     "name": "Yves Sacurae",
