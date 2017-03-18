@@ -1,6 +1,6 @@
 {
   "name": "generator-inu",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Yo Inu Generator for front-end developers",
   "main": "generators/index.js",
   "homepage": "https://github.com/yvessacurae/generator-inu",
