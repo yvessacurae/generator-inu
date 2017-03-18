@@ -1,8 +1,8 @@
 {
   "name": "generator-inu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yo Inu Generator for front-end developers",
-  "main": "index.js",
+  "main": "generators/index.js",
   "homepage": "https://github.com/yvessacurae/generator-inu",
   "author": {
     "name": "Yves Sacurae",
@@ -12,7 +12,6 @@
   "files": [
     "generators"
   ],
-  "main": "generators/index.js",
   "keywords": [
     "yeoman-generator"
   ],
