@@ -14,7 +14,9 @@ gulp.task('styles', function() {
 	setTimeout(function() {
 		gulp.src('src/scss/styles.scss')
 			.pipe(sourcemaps.init())
-			.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+			.pipe(plumber({errorHandler: notify.onError(function(error) {
+				return "Error: " + error.message;
+			})}))
 			.pipe(sass())
 			.pipe(autoprefixer({
 				browsers: ['last 2 versions'],
@@ -32,7 +34,9 @@ gulp.task('scripts', function() {
 		gulp.src([
 			'src/js/**/*.js'
 			])
-			.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+			.pipe(plumber({errorHandler: notify.onError(function(error) {
+				return "Error: " + error.message;
+			})}))
 			.pipe(sourcemaps.init())
 			.pipe(concat('scripts.js'))
 			.pipe(sourcemaps.write('../maps/'))
@@ -44,7 +48,9 @@ gulp.task('scripts', function() {
 gulp.task('views', function buildHTML() {
   return gulp.src('src/views/*.pug')
 		.pipe(sourcemaps.init())
-		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+		.pipe(plumber({errorHandler: notify.onError(function(error) {
+			return "Error: " + error.message;
+		})}))
 		.pipe(pug())
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest('dist/'))
