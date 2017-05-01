@@ -1,4 +1,4 @@
-var	pug 			= require('gulp-pug');
+var	pug 			= require('gulp-pug'),
 	gulp 			= require('gulp'),
 	sass 			= require('gulp-sass'),
 	notify 			= require("gulp-notify"),
